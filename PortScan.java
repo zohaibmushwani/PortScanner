@@ -19,7 +19,6 @@ public class PortScan implements Runnable {
 			socket.connect(socketAddress,1);
 			if(socket.isConnected()) {
 				System.out.println(socket.getPort()+ " opened");
-				OpenPorts.addPort(socket.getPort());
 				socket.close();
 			}
 		} catch (IOException e) {
